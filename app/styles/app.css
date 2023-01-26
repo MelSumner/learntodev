@@ -156,6 +156,7 @@ ul.cards li a {
   padding: 5px;
   text-align: center;
   text-decoration: none;
+  font-size: 16px;
 }
 
 ul.cards li a:hover {
@@ -182,7 +183,11 @@ ul.cards li a:hover {
 }
 .link__text {
   justify-content: center;
-  font-size: 1.5rem;
+}
+@media screen and (min-width:40em) {
+  .link__text {
+    font-size: 1.5rem;
+  }
 }
 .link__cost-indicator {
   justify-content: flex-end;
