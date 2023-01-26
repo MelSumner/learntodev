@@ -1,7 +1,6 @@
 # learntodev
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a microsite that lists resources for new developers. Contributions are welcome! Please be kind if you open a PR.
 
 ## Prerequisites
 
@@ -46,7 +45,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+When changes are merged into the `main` branch, the site will automatically deploy.
 
 ## Further Reading / Useful Links
 

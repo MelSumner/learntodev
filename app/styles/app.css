@@ -1,0 +1,231 @@
+:root {
+  --font-heading: Courier, monospace;
+  --font-body: system-ui, sans-serif;
+  --color-primary: #103c80;
+  --color-complementary: white;
+}
+
+*, *::after, *::before { box-sizing: border-box; }
+
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #e9e9ea;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: normal;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  line-height: 1.5;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+@media screen and (min-width: 40em) {
+  body {
+    font-size: 22px;
+  }
+}
+
+header, main, footer {
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+}
+@media screen and (min-width: 40em) {
+  header, main, footer {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media screen and (min-width: 52em) {
+  header, main, footer {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+/* @media screen and (min-width: 1280px) {
+  header, main, footer {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+} */
+
+header {
+  padding-top: 2rem;
+  
+}
+header > h1 {
+  display: flex;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  justify-content: center;
+  align-content:center;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+@media screen and (min-width: 40em) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 52em) {
+  header h1 {
+    font-size: 2.91rem;
+  }
+}
+main {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 2rem;
+  overflow: auto;
+}
+
+.hr1 {
+  background-color: var(--color-primary);
+  padding: 0;
+  height: 4px;
+  border: 0;
+  display: block;
+  color: inherit;
+}
+.hr2 {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 8px, var(--color-primary) 8px, var(--color-primary) 10px);
+  padding: 0px;
+  aspect-ratio: 50 / 1;
+  border: 0px;
+  display: block;
+  color: inherit;
+}
+ul.cards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  grid-auto-rows: 150px;
+  width: 100%;
+}
+
+@media screen and (min-width: 69em) {
+  ul.cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+ul.cards li {
+  width: 100%;
+  height: 100%;
+}
+
+ul.cards li a {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--color-complementary);
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+ul.cards li a:hover {
+  text-decoration: underline;
+}
+
+.link__badge, .link__text, .link__cost-indicator {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.link__badge {
+  justify-content: flex-start;
+}
+.link__badge span {
+  background-color: var(--color-complementary);
+  color: var(--color-primary);
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.link__text {
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.link__cost-indicator {
+  justify-content: flex-end;
+}
+
+.link__cost-indicator span {
+  background-color: var(--color-complementary);
+  color: var(--color-primary);
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-complementary);
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+footer p { 
+  padding: 0;
+  margin: 0;
+  width: 100%; 
+  display: flex;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 75em) {
+  footer {
+    justify-content: space-between;
+  }
+  footer p {
+    width: fit-content;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+footer a,
+footer a:visited { 
+  color: var(--color-complementary);
+}
