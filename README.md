@@ -1,5 +1,7 @@
 # learntodev
 
+<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-dark.svg" alt="Deploys by Netlify" /> </a> 
+
 This is a microsite that lists resources for new developers. Contributions are welcome! Please be kind if you open a PR.
 
 ## Prerequisites
